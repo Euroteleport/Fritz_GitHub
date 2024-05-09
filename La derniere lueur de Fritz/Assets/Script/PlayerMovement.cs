@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+    public Animator animator;
+    public SpriteRenderer spriteRenderer;
 
     void Update()
     {
@@ -25,6 +27,11 @@ public class PlayerMovement : MonoBehaviour
         }
 
         Flip();
+
+        float characterVelocity = Mathf.Abs(rb.velocity.x);
+        animator.SetFloat("Speed", characterVelocity);
+
+        Flip(rb.velocity.x);
     }
 
     private void FixedUpdate() 
@@ -44,6 +51,17 @@ public class PlayerMovement : MonoBehaviour
             isFacingRight = !isFacingRight;
             Vector3 localScale = transform.localScale;
             transform.localScale = localScale;
+        }
+    }
+
+    void Flip(float _velocity)
+    {
+        if(_velocity > 0.1f)
+        {
+          spriteRenderer.flipX = false;
+        }else if(_velocity < -0.1f) 
+        {
+          spriteRenderer.flipX = true;    
         }
     }
 }

@@ -13,11 +13,9 @@ public class deplacementFritz : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     
     private Vector3 velocity = Vector3.zero;
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> origin/Anthony
+
+
   
     void FixedUpdate()
     {
