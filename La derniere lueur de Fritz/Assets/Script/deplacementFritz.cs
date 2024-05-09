@@ -10,7 +10,6 @@ public class deplacementFritz : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     
     private Vector3 velocity = Vector3.zero;
-    
 
   
     void FixedUpdate()
@@ -19,7 +18,8 @@ public class deplacementFritz : MonoBehaviour
          
          if(Input.GetButtonDown("Jump"))
          {
-           isJumping = true;
+            Debug.Log("jump");
+            isJumping = true;
          }
              
     
