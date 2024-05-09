@@ -13,7 +13,11 @@ public class deplacementFritz : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     
     private Vector3 velocity = Vector3.zero;
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> origin/Anthony
   
     void FixedUpdate()
     {
@@ -22,7 +26,8 @@ public class deplacementFritz : MonoBehaviour
          
          if(Input.GetKeyDown(KeyCode.Space))
          {
-           isJumping = true;
+            Debug.Log("jump");
+            isJumping = true;
          }
              
     
