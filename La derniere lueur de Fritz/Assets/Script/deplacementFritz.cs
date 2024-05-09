@@ -5,19 +5,22 @@ public class deplacementFritz : MonoBehaviour
     public float moveSpeed;
     public float jumpForce;
     public bool isJumping;
+    public bool isGrounded;
+    public Transform groundCheckLeft;
+    public Transform groundCheckRight;
     public Rigidbody2D rb;
     public Animator animator;
     public SpriteRenderer spriteRenderer;
     
     private Vector3 velocity = Vector3.zero;
     
-
   
     void FixedUpdate()
     {
+        isGrounded = Physics2D.OverlapArea(groundCheckLeft.position, groundCheckRight.position);
         float horizontalMovement = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
          
-         if(Input.GetButtonDown("Jump"))
+         if(Input.GetKeyDown(KeyCode.Space))
          {
            isJumping = true;
          }
