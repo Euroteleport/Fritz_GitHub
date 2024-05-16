@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FritzVie1 : MonoBehaviour
 {
@@ -23,7 +24,7 @@ public class FritzVie1 : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.H))
         {
-            TakeDamage(20);
+            TakeDamage(100);
         }
     }
 
@@ -33,10 +34,24 @@ public class FritzVie1 : MonoBehaviour
       {
         currentHealth -= damage;
         barreDeVie.SetHealth(currentHealth);
+       
+        if(currentHealth <= 0)
+        {
+          Mort();
+          return;
+        }
+        
         isInvicible = true;
         StartCoroutine(InvicibilityFlash());
         StartCoroutine(DelaisInvincible());
       }
+    }
+
+    public void Mort()
+    {
+      PlayerMovement.instance.enabled = false;
+      //PlayerMovement.instance.animator.SetTrigger("Mort");
+      PlayerMovement.instance.rb.bodyType = RigidbodyType2D.Kinematic;
     }
 
     public IEnumerator InvicibilityFlash()
@@ -55,5 +70,4 @@ public class FritzVie1 : MonoBehaviour
         yield return new WaitForSeconds(2f);
         isInvicible = false;
       }
-
 }

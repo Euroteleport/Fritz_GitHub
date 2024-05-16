@@ -9096,8 +9096,8 @@ MonoBehaviour:
   patrolPoint:
   - {fileID: 585871687}
   - {fileID: 489664693}
-  DamageOnCollision: 0
-  moveSpeed: 0
+  DamageOnCollision: 20
+  moveSpeed: 3
   patrolDest: 0
   Visuel: {fileID: 1766970227}
 --- !u!70 &1766970230

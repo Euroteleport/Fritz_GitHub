@@ -6,11 +6,19 @@ public class PlayerMovement : MonoBehaviour
     private bool isFacingRight = true;
     [SerializeField] private float speed = 8f;
     [SerializeField] private float jumpForce = 10f;
-    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] public Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
     public Animator animator;
     public SpriteRenderer spriteRenderer;
+    public static PlayerMovement instance;
+    
+    
+    public void Awake()
+    {
+        instance = this;
+
+    }
 
     void Update()
     {
