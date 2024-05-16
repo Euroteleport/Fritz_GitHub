@@ -11,6 +11,7 @@ public class PointFaible : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             Destroy(transform.parent.gameObject);
+            Inventaire.instance.AjoutAmes(1);
         }
     }
 }

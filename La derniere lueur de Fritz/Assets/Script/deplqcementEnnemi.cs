@@ -5,6 +5,7 @@ using UnityEngine;
 public class deplqcementEnnemi : MonoBehaviour
 {
     public Transform[] patrolPoint;
+    public int DamageOnCollision;
     public float moveSpeed;
     public int patrolDest;
     public SpriteRenderer Visuel;
