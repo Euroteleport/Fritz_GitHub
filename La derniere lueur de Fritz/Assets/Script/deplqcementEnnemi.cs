@@ -34,4 +34,14 @@ public class deplqcementEnnemi : MonoBehaviour
        }
     
     }  
+     private void OnCollisionEnter2D(Collision2D collision) 
+    {
+      if(collision.transform.CompareTag("Player"))
+      {
+        FritzVie1 fritzVie = collision.transform.GetComponent<FritzVie1>();
+        fritzVie.TakeDamage(20);
+      }
+    }
+
+
 }

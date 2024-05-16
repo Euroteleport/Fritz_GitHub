@@ -307,7 +307,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.43194538, y: -0.38482106}
@@ -8587,6 +8587,8 @@ GameObject:
   - component: {fileID: 1766970227}
   - component: {fileID: 1766970226}
   - component: {fileID: 1766970229}
+  - component: {fileID: 1766970230}
+  - component: {fileID: 1766970231}
   m_Layer: 0
   m_Name: Visuel
   m_TagString: Untagged
@@ -8698,9 +8700,58 @@ MonoBehaviour:
   patrolPoint:
   - {fileID: 585871687}
   - {fileID: 489664693}
-  moveSpeed: 3
+  moveSpeed: 0
   patrolDest: 0
   Visuel: {fileID: 1766970227}
+--- !u!70 &1766970230
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1766970225}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.8847649, y: -0.5113689}
+  m_Size: {x: 4.997222, y: 1.6203793}
+  m_Direction: 1
+--- !u!114 &1766970231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1766970225}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd206a9030dbcea4abf2df5d027f4f06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  waypoints: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
