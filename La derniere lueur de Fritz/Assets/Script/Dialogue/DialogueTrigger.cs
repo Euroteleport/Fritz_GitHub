@@ -5,7 +5,7 @@ public class DialogueTrigger : MonoBehaviour
     public Dialogue dialogue;
     private bool inRange = false;
     private bool inDialogue = false;
-    [SerializeField] private GameObject touche;
+    [SerializeField] private GameObject logoTouche;
 
     
     void Update()
@@ -21,7 +21,7 @@ public class DialogueTrigger : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
-            touche.SetActive(true);
+            logoTouche.SetActive(true);
             inRange = true;
         }
     }
@@ -30,7 +30,7 @@ public class DialogueTrigger : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
-            touche.SetActive(false);
+            logoTouche.SetActive(false);
             inRange = false;
         }
     }
