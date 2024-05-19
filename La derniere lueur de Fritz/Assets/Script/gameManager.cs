@@ -1,12 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class gameManager : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
     public GameObject gameOverUi;
-    public static gameManager instance;
+    public static GameManager instance;
     
     
     public void Awake()

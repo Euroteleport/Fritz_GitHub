@@ -52,7 +52,7 @@ public class FritzVie1 : MonoBehaviour
       PlayerMovement.instance.enabled = false;
       //PlayerMovement.instance.animator.SetTrigger("Mort");
       PlayerMovement.instance.rb.bodyType = RigidbodyType2D.Kinematic;
-      gameManager.instance.OnPlayerDeath();
+      GameManager.instance.OnPlayerDeath();
     }
 
     public IEnumerator InvicibilityFlash()
