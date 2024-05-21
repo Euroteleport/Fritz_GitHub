@@ -705,8 +705,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 362567948}
-  - component: {fileID: 362567947}
   - component: {fileID: 362567946}
+  - component: {fileID: 362567949}
   m_Layer: 0
   m_Name: La Mort
   m_TagString: Untagged
@@ -759,27 +759,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.5, y: 4.7}
   m_EdgeRadius: 0
---- !u!114 &362567947
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 362567945}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ae0329d478e5344f8a0839cbd4746f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    lines:
-    - speaker: Mort
-      text: Prout
-    - speaker: Mort
-      text: Big Prout
-    - speaker: Mort
-      text: Prout de fin
-  touche: {fileID: 898285670}
 --- !u!4 &362567948
 Transform:
   m_ObjectHideFlags: 0
@@ -796,6 +775,25 @@ Transform:
   - {fileID: 524052030}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &362567949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362567945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a57125405ed2e6948b332659fce072a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    lines:
+    - speaker: Mort
+      text: Fritz, mon fils...
+    - speaker: Mort
+      text: Je t'attendais.
+  logoTouche: {fileID: 898285670}
 --- !u!1 &476493819
 GameObject:
   m_ObjectHideFlags: 0
